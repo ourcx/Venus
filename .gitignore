@@ -1,0 +1,65 @@
+
+# 依赖 & 日志文件
+# Dependencies & Log Files
+node_modules
+npm-debug.log*
+yarn-error.log
+pnpm-debug.log*
+
+# 编译输出目录
+# Build output folders
+dist
+unpackage/dist/*
+/build/
+/out/
+
+# uni-app 临时文件
+# uni-app temporary files
+unpackage/
+/manifest.json
+/pages.json
+/main.js
+/App.vue
+/uni.scss
+/uni_modules
+unpackage/dist/
+unpackage/build/
+
+# 更多临时文件和缓存
+# More temporary files and caches
+.tmp
+.cache
+.idea
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 编辑器和 IDE 配置文件
+# Editor and IDE configuration files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+# 操作系统生成的文件
+# Operating system generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 环境变量文件 (包含敏感信息)
+# Environment variables file (contains sensitive information)
+.env
+.env.local
+.env.*.local
+
+# 配置文件
+# Configuration files
+/vue.config.jsu
