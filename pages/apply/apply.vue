@@ -222,6 +222,17 @@ export default {
 
                 }
             }
+            .file-content{
+                font-size: 16rpx;
+                color: #666;
+                margin-top: 10rpx;
+                text-align: center;
+                .file-text{
+                    font-size: 16rpx;
+                    color: #666;
+                }
+            }
+
         }
     }
     .popup-content{
