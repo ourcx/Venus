@@ -1,0 +1,77 @@
+{
+	"pages": [
+		// 首页页面配置
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		// 报名页面配置
+		{
+			"path": "pages/apply/apply",
+			"style": {
+				"navigationBarTitleText": "报名"
+			}
+		},
+		// 咨询页面配置
+		{
+			"path": "pages/consult/consult",
+			"style": {
+				"navigationBarTitleText": "咨询"
+			}
+		},
+		// 关于页面配置
+		{
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}
+	],
+	"easycom": {
+	    "autoscan": true,
+	    "custom": {
+	      // uni-ui 的 easycom 规则
+	      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+	    }
+	  },
+	"tabBar": {
+		"color": "#3e4757", // 默认文字颜色
+		"selectedColor": "#42c29e", // 选中文字颜色
+		"backgroundColor": "#FFFFFF", // 背景色
+		"borderStyle": "white", // 边框颜色
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home-active.png"
+			},
+			{
+				"pagePath": "pages/apply/apply",
+				"text": "报名",
+				"iconPath": "static/tabbar/apply.png",
+				"selectedIconPath": "static/tabbar/apply-active.png"
+			},
+			{
+				"pagePath": "pages/consult/consult",
+				"text": "咨询",
+				"iconPath": "static/tabbar/consult.png",
+				"selectedIconPath": "static/tabbar/consult-active.png"
+			},
+			{
+				"pagePath": "pages/about/about",
+				"text": "关于",
+				"iconPath": "static/tabbar/about.png",
+				"selectedIconPath": "static/tabbar/about-active.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

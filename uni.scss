@@ -1,0 +1,207 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 主色调 - 绿色渐变 */
+$uni-color-primary-dark: #339E80;     // 深绿色
+$uni-color-primary-main: #42C29E;     // 主绿色
+$uni-color-primary-light: #69CEB2;    // 浅绿色
+$uni-color-primary-lighter: #8FDBC5;  // 更浅绿
+
+/* 行为相关颜色 */
+$uni-color-primary: #42C29E;          // 主要按钮颜色，使用主绿色
+$uni-color-success: #4cd964;          // 成功颜色（保持原样）
+$uni-color-warning: #f0ad4e;          // 警告颜色（保持原样）
+$uni-color-error: #dd524d;            // 错误颜色（保持原样）
+
+/* 文字基本颜色 */
+$uni-text-color: #333;                // 基本色
+$uni-text-color-inverse: #fff;        // 反色
+$uni-text-color-grey: #999;           // 辅助灰色
+$uni-text-color-placeholder: #808080; // 占位符颜色
+$uni-text-color-disable: #c0c0c0;     // 禁用颜色
+
+/* 背景颜色 */
+$uni-bg-color: #ffffff;               // 背景色
+$uni-bg-color-grey: #f8f8f8;          // 灰色背景
+$uni-bg-color-hover: rgba(66, 194, 158, 0.1); // 悬停背景色（使用主绿色透明度）
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4);       // 遮罩颜色
+
+/* 边框颜色 */
+$uni-border-color: #c8c7cc;           // 边框颜色
+
+/* 尺寸变量 */
+
+/* 文字尺寸 */
+$uni-font-size-sm: 12px;
+$uni-font-size-base: 14px;
+$uni-font-size-lg: 16px;
+
+/* 图片尺寸 */
+$uni-img-size-sm: 20px;
+$uni-img-size-base: 26px;
+$uni-img-size-lg: 40px;
+
+/* Border Radius */
+$uni-border-radius-sm: 2px;
+$uni-border-radius-base: 3px;
+$uni-border-radius-lg: 6px;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+$uni-spacing-row-sm: 5px;
+$uni-spacing-row-base: 10px;
+$uni-spacing-row-lg: 15px;
+
+/* 垂直间距 */
+$uni-spacing-col-sm: 4px;
+$uni-spacing-col-base: 8px;
+$uni-spacing-col-lg: 12px;
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 */
+$uni-color-title: #2C405A;            // 文章标题颜色
+$uni-font-size-title: 20px;
+$uni-color-subtitle: #555555;         // 二级标题颜色
+$uni-font-size-subtitle: 26px;
+$uni-color-paragraph: #3F536E;        // 文章段落颜色
+$uni-font-size-paragraph: 15px;
+
+/* CSS变量定义（用于运行时动态主题） */
+:root {
+  /* 绿色主题变量 */
+  --uni-color-primary-dark: #339E80;
+  --uni-color-primary-main: #42C29E;
+  --uni-color-primary-light: #69CEB2;
+  --uni-color-primary-lighter: #8FDBC5;
+  
+  /* 行为相关颜色 */
+  --uni-color-primary: #42C29E;
+  --uni-color-success: #4cd964;
+  --uni-color-warning: #f0ad4e;
+  --uni-color-error: #dd524d;
+  
+  /* 文字颜色 */
+  --uni-text-color: #333;
+  --uni-text-color-inverse: #fff;
+  --uni-text-color-grey: #999;
+  
+  /* 背景颜色 */
+  --uni-bg-color: #ffffff;
+  --uni-bg-color-grey: #f8f8f8;
+  
+  /* 边框颜色 */
+  --uni-border-color: #c8c7cc;
+}
+
+/* 绿色主题扩展类（可选使用） */
+.uni-theme-green {
+  /* 文字颜色类 */
+  .text-primary-dark { color: $uni-color-primary-dark !important; }
+  .text-primary-main { color: $uni-color-primary-main !important; }
+  .text-primary-light { color: $uni-color-primary-light !important; }
+  .text-primary-lighter { color: $uni-color-primary-lighter !important; }
+  
+  /* 背景颜色类 */
+  .bg-primary-dark { background-color: $uni-color-primary-dark !important; }
+  .bg-primary-main { background-color: $uni-color-primary-main !important; }
+  .bg-primary-light { background-color: $uni-color-primary-light !important; }
+  .bg-primary-lighter { background-color: $uni-color-primary-lighter !important; }
+  
+  /* 渐变背景 */
+  .gradient-primary {
+    background: linear-gradient(135deg, $uni-color-primary-dark, $uni-color-primary-main) !important;
+  }
+  
+  .gradient-light {
+    background: linear-gradient(135deg, $uni-color-primary-light, $uni-color-primary-lighter) !important;
+  }
+  
+  /* 边框 */
+  .border-primary {
+    border-color: $uni-color-primary-main !important;
+  }
+}
+
+/* 全局通用绿色主题样式 */
+.primary-btn {
+  background-color: $uni-color-primary-main !important;
+  border-color: $uni-color-primary-main !important;
+  color: $uni-text-color-inverse !important;
+  
+  &:active {
+    background-color: $uni-color-primary-dark !important;
+  }
+}
+
+.primary-outline-btn {
+  background-color: transparent !important;
+  border-color: $uni-color-primary-main !important;
+  color: $uni-color-primary-main !important;
+  
+  &:active {
+    background-color: rgba($uni-color-primary-main, 0.1) !important;
+  }
+}
+
+/* 卡片样式 */
+.primary-card {
+  background: $uni-bg-color;
+  border-radius: $uni-border-radius-lg;
+  padding: $uni-spacing-col-base $uni-spacing-row-base;
+  box-shadow: 0 2px 12px rgba(66, 194, 158, 0.1);
+  border-left: 4px solid $uni-color-primary-main;
+}
+
+/* 链接颜色 */
+.primary-link {
+  color: $uni-color-primary-main !important;
+  
+  &:active {
+    color: $uni-color-primary-dark !important;
+  }
+}
+
+
+:root {
+  /* 主色调 */
+  --u-primary: #42C29E;
+  --u-primary-dark: #339E80;
+  --u-primary-light: #69CEB2;
+  --u-primary-disabled: #8FDBC5;
+  
+  /* 错误颜色 */
+  --u-error: #dd524d;
+  --u-error-dark: #d44d48;
+  --u-error-light: #f56c6c;
+  --u-error-disabled: #fab6b6;
+  
+  /* 警告颜色 */
+  --u-warning: #f0ad4e;
+  --u-warning-dark: #e6a23c;
+  --u-warning-light: #f7c174;
+  --u-warning-disabled: #fce1b5;
+  
+  /* 成功颜色 */
+  --u-success: #4cd964;
+  --u-success-dark: #3dc956;
+  --u-success-light: #6ce082;
+  --u-success-disabled: #b8f0c2;
+  
+  /* 信息颜色 */
+  --u-info: #909399;
+  --u-info-dark: #82848a;
+  --u-info-light: #a6a9ad;
+  --u-info-disabled: #d4d6d9;
+}
