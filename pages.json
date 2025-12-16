@@ -30,12 +30,11 @@
 		}
 	],
 	"easycom": {
-	    "autoscan": true,
-	    "custom": {
-	      // uni-ui 的 easycom 规则
-	      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
-	    }
-	  },
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
 	"tabBar": {
 		"color": "#3e4757", // 默认文字颜色
 		"selectedColor": "#42c29e", // 选中文字颜色
