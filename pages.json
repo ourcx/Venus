@@ -29,6 +29,20 @@
 			}
 		}
 	],
+	"subPackages": [
+		{
+			"root": "pages-sub",
+			"pages": [
+				{
+					"path": "richText/richText",
+					"style": {
+						"navigationBarTitleText": " 公众号推文"
+						
+					}
+				}
+			]
+		}
+	],
 	"easycom": {
 		"autoscan": true,
 		"custom": {
