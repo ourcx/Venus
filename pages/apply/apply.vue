@@ -192,8 +192,7 @@
 					<view class="tips-content">
 						<text class="tip-item">1. 请确保填写信息真实有效</text>
 						<text class="tip-item">2. 如有疑问，可在招新群内咨询</text>
-						<text class="tip-item">3. 报名截止时间：2024年12月31日</text>
-						<text class="tip-item">4. 我们将在3个工作日内回复审核结果</text>
+						<text class="tip-item">3. 报名截止时间：2026年1月16日</text>
 					</view>
 				</view>
 			</view>
@@ -231,22 +230,25 @@
 	const popup = ref(null)
 
 	const toFeiShu = () => {
-		uni.navigateToMiniProgram({
-			shortLink: '#小程序://智能问卷/5wDK8hpcVC5byjs',
-			success: (res) => {
-				console.log('跳转成功', res)
-				uni.showToast({
-					title: '跳转成功',
-					icon: 'success'
-				})
-			},
-			fail: (err) => {
-				console.error('跳转失败', err)
-				uni.showToast({
-					title: '跳转失败，请稍后重试',
-					icon: 'none'
-				})
-			}
+		// uni.navigateToMiniProgram({
+		// 	shortLink: '#小程序://智能问卷/5wDK8hpcVC5byjs',
+		// 	success: (res) => {
+		// 		console.log('跳转成功', res)
+		// 		uni.showToast({
+		// 			title: '跳转成功',
+		// 			icon: 'success'
+		// 		})
+		// 	},
+		// 	fail: (err) => {
+		// 		console.error('跳转失败', err)
+		// 		uni.showToast({
+		// 			title: '跳转失败，请稍后重试',
+		// 			icon: 'none'
+		// 		})
+		// 	}
+		// })
+		uni.navigateTo({
+			url:'/pages-sub/web-view/web-view?url=https://eid5t7dqqmy.feishu.cn/share/base/form/shrcnbP5wTO78HnyWcvbZZU8w3e'
 		})
 	}
 
@@ -384,7 +386,7 @@
 				if (res.confirm) {
 					// 保存图片逻辑
 					uni.downloadFile({
-						url: 'https://s2.loli.net/2025/11/15/fQ5bv8o2cxuC9da.jpg', // 二维码图片URL
+						url: 'https://s2.loli.net/2025/12/22/DQoznpFXIWrGebm.png', // 二维码图片URL
 						success: (downloadRes) => {
 							uni.saveImageToPhotosAlbum({
 								filePath: downloadRes.tempFilePath,

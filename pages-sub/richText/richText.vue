@@ -67,6 +67,7 @@
 						.replace(/visibility:\s*hidden;\s*opacity:\s*0;/g, '');
 
 					content.value = articleHtml;
+					console.log(articleHtml)
 				} else {
 					error.value = '文章内容提取失败';
 				}

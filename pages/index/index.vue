@@ -4,7 +4,7 @@
 		<scroll-view class="main-content" scroll-y :refresher-enabled="true" :refresher-triggered="refreshing"
 			@refresherrefresh="onRefresh">
 			<!-- 1. 轮播图：使用 uni-app 原生 swiper -->
-			<view class="swiper-section">
+<!-- 			<view class="swiper-section">
 				<swiper class="swiper" :indicator-dots="true" :indicator-color="uniTextColorGrey"
 					:indicator-active-color="uniColorPrimaryMain" :autoplay="true" :interval="3000" :circular="true"
 					:duration="500">
@@ -12,7 +12,7 @@
 						<image :src="item" mode="scaleToFill" class="swiper-image" @click="handleBannerClick(index)" />
 					</swiper-item>
 				</swiper>
-			</view>
+			</view> -->
 
 			<!-- 2. 欢迎标语：使用绿色主题卡片 -->
 			<view class="welcome-section">
@@ -57,7 +57,7 @@
 				<view class="section-title">核心功能</view>
 
 				<!-- 服务展示 -->
-				<view class="func-card" @click="goToService">
+<!-- 				<view class="func-card" @click="goToService">
 					<view class="function-item">
 						<uni-icons type="home-filled" size="30" color="var(--uni-color-primary-main)" />
 						<view class="function-info">
@@ -66,7 +66,7 @@
 						</view>
 						<uni-icons type="arrowright" size="20" color="var(--uni-text-color-grey)" />
 					</view>
-				</view>
+				</view> -->
 
 				<!-- 招新报名 -->
 				<view class="func-card" @click="goToRecruitment">
@@ -84,7 +84,7 @@
 				</view>
 
 				<!-- 团队动态 -->
-				<view class="func-card" @click="goToDynamic">
+<!-- 				<view class="func-card" @click="goToDynamic">
 					<view class="function-item">
 						<uni-icons type="image" size="30" color="var(--u-success)" />
 						<view class="function-info">
@@ -93,11 +93,11 @@
 						</view>
 						<uni-icons type="arrowright" size="20" color="var(--uni-text-color-grey)" />
 					</view>
-				</view>
+				</view> -->
 			</view>
 
 			<!-- 5. 最新动态 -->
-			<view class="dynamic-section">
+			<!-- <view class="dynamic-section">
 				<view class="section-header">
 					<text class="section-title">最新动态</text>
 					<text class="section-more primary-link" @click="goToDynamic">查看更多</text>
@@ -125,10 +125,10 @@
 						</view>
 					</view>
 				</view>
-			</view>
+			</view> -->
 
 			<!-- 7. 联系我们 -->
-			<view class="contact-section">
+<!-- 			<view class="contact-section">
 				<view class="custom-card">
 					<view class="card-body contact-content">
 						<uni-icons type="phone-filled" size="30" color="var(--uni-color-primary-main)" />
@@ -140,7 +140,7 @@
 						</button>
 					</view>
 				</view>
-			</view>
+			</view> -->
 			
 			<view class="contact-section">
 				<view class="custom-card">
@@ -188,13 +188,14 @@
 	])
 
 	// 快捷入口 - 使用主题颜色
-	const quickList = ref([{
-			id: 1,
-			title: '服务',
-			icon: 'home',
-			color: uniColorPrimaryMain,
-			path: '/pages/service/list'
-		},
+	const quickList = ref([
+		// {
+		// 	id: 1,
+		// 	title: '服务',
+		// 	icon: 'home',
+		// 	color: uniColorPrimaryMain,
+		// 	path: '/pages/service/list'
+		// },
 		{
 			id: 2,
 			title: '报名',
@@ -202,33 +203,33 @@
 			color: '#f0ad4e',
 			path: '/pages/apply/apply'
 		},
-		{
-			id: 3,
-			title: '咨询',
-			icon: 'image',
-			color: '#4cd964',
-			path: '/pages/consult/consult'
-		},
-		{
-			id: 4,
-			title: '关于',
-			icon: 'settings',
-			color: '#909399',
-			path: '/pages/about/about'
-		},
+		// {
+		// 	id: 3,
+		// 	title: '咨询',
+		// 	icon: 'image',
+		// 	color: '#4cd964',
+		// 	path: '/pages/consult/consult'
+		// },
+		// {
+		// 	id: 4,
+		// 	title: '关于',
+		// 	icon: 'settings',
+		// 	color: '#909399',
+		// 	path: '/pages/about/about'
+		// },
 	])
 
 	// 动态数据
 	const dynamicList = ref([
-		{
-			id: 2,
-			content: '2026年招新计划正式启动，诚邀有志之士加入我们的团队！',
-			tag: '招新公告',
-			tagType: 'warning',
-			time: '昨天',
-			likes: 89,
-			comments: 12
-		}
+		// {
+		// 	id: 2,
+		// 	content: '2026年招新计划正式启动，诚邀有志之士加入我们的团队！',
+		// 	tag: '招新公告',
+		// 	tagType: 'warning',
+		// 	time: '昨天',
+		// 	likes: 89,
+		// 	comments: 12
+		// }
 	])
 
 	// 统计数据
@@ -284,25 +285,25 @@
 	}
 
 	const handleQuickClick = (item) => {
-		uni.navigateTo({
+		uni.switchTab({
 			url: item.path
 		})
 	}
 
 	const goToService = () => {
-		uni.navigateTo({
+		uni.switchTabswitchTab({
 			url: '/pages/service/list'
 		})
 	}
 
 	const goToRecruitment = () => {
-		uni.navigateTo({
+		uni.switchTab({
 			url: '/pages/apply/apply'
 		})
 	}
 
 	const goToDynamic = () => {
-		uni.navigateTo({
+		uni.switchTab({
 			url: '/pages/dynamic/list'
 		})
 	}
@@ -351,10 +352,11 @@
 			if (res.code === 200) {
 				console.log('请求成功:', res)
 				hitokoto.value = res.result.saying || '',
-					anthor.value = res.result.source || ''
+				anthor.value = res.result.source || ''
 			}
 		} catch (err) {
-			console.error('请求失败:', err)
+			hitokoto.value = '天行健，君子以自强不息',
+			anthor.value = '周易'
 		}
 	}
 </script>

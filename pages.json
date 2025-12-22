@@ -36,8 +36,13 @@
 				{
 					"path": "richText/richText",
 					"style": {
-						"navigationBarTitleText": " 公众号推文"
-						
+						"navigationBarTitleText": "公众号推文"
+					}
+				},
+				{
+					"path": "web-view/web-view",
+					"style": {
+						"navigationBarTitleText": "报名"
 					}
 				}
 			]
@@ -49,12 +54,14 @@
 			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
 		}
 	},
+	"lazyCodeLoading": "requiredComponents",
 	"tabBar": {
 		"color": "#3e4757", // 默认文字颜色
 		"selectedColor": "#42c29e", // 选中文字颜色
 		"backgroundColor": "#FFFFFF", // 背景色
 		"borderStyle": "white", // 边框颜色
-		"list": [{
+		"list": [
+			{
 				"pagePath": "pages/index/index",
 				"text": "首页",
 				"iconPath": "static/tabbar/home.png",
@@ -65,19 +72,19 @@
 				"text": "报名",
 				"iconPath": "static/tabbar/apply.png",
 				"selectedIconPath": "static/tabbar/apply-active.png"
-			},
-			{
-				"pagePath": "pages/consult/consult",
-				"text": "咨询",
-				"iconPath": "static/tabbar/consult.png",
-				"selectedIconPath": "static/tabbar/consult-active.png"
-			},
-			{
-				"pagePath": "pages/about/about",
-				"text": "关于",
-				"iconPath": "static/tabbar/about.png",
-				"selectedIconPath": "static/tabbar/about-active.png"
 			}
+			// {
+			// 	"pagePath": "pages/consult/consult",
+			// 	"text": "咨询",
+			// 	"iconPath": "static/tabbar/consult.png",
+			// 	"selectedIconPath": "static/tabbar/consult-active.png"
+			// },
+			// {
+			// 	"pagePath": "pages/about/about",
+			// 	"text": "关于",
+			// 	"iconPath": "static/tabbar/about.png",
+			// 	"selectedIconPath": "static/tabbar/about-active.png"
+			// }
 		]
 	},
 	"globalStyle": {
